@@ -33,6 +33,16 @@ public class PhoneBookTest {
         Assertions.assertEquals(expected, result);
     }
 
+    @Test
+    public void testFindByNumber() {
+        // Arrange
+        String expected = "Petr";
+        // Act
+        String result = phoneBook.findByNumber();
+        // Assert
+        Assertions.assertEquals(expected, result);
+    }
+
     @AfterEach
     public void endOfTest() {
         System.out.println("[END OF THE TEST]\n---------------------------------------");
