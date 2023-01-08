@@ -3,6 +3,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class PhoneBookTest {
     private PhoneBook phoneBook;
 
@@ -55,6 +58,19 @@ public class PhoneBookTest {
         phoneBook.add("Petr", "+79864666666");
         // Act
         String result = phoneBook.findByName("Petr");
+        // Assert
+        Assertions.assertEquals(expected, result);
+    }
+
+    @Test
+    public void testPrintAllNames() {
+        // Arrange
+        List<String> expected = Arrays.asList("Anna", "Kim", "Petr");
+        phoneBook.add("Kim", "+79812121212");
+        phoneBook.add("Anna", "+79864522312");
+        phoneBook.add("Petr", "+79864666666");
+        // Act
+        List<String> result = phoneBook.printAllNames();
         // Assert
         Assertions.assertEquals(expected, result);
     }
