@@ -19,6 +19,10 @@ public class PhoneBook {
         return null;
     }
 
+    public String findByName(String name) {
+        return null;
+    }
+
     /*public static void main(String[] args) {
         PhoneBook phoneBook1 = new PhoneBook();
         phoneBook1.add("Anna", "+79864522312");
