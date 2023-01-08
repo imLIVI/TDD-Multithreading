@@ -28,6 +28,11 @@ public class PhoneBook {
     }
 
     public List<String> printAllNames() {
-        return null;
+        List<String> listOfNames = new LinkedList<>();
+        for (Map.Entry<String, String> entry : phoneBook.entrySet()) {
+            listOfNames.add(entry.getKey());
+            System.out.println(entry.getKey());
+        }
+        return listOfNames;
     }
 }
