@@ -54,7 +54,7 @@ public class PhoneBookTest {
         phoneBook.add("Anna", "+79864522312");
         phoneBook.add("Petr", "+79864666666");
         // Act
-        String result = phoneBook.findByName("+Petr");
+        String result = phoneBook.findByName("Petr");
         // Assert
         Assertions.assertEquals(expected, result);
     }
